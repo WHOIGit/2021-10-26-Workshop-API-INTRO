@@ -1,0 +1,79 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@k-rns
+WHOIGit /
+2021-10-27-Workshop-DataReuse
+Public
+generated from carpentries/workshop-template
+
+7
+0
+
+    0
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+2021-10-27-Workshop-DataReuse/_includes/swc/setup.html
+@k-rns
+k-rns Initial commit
+Latest commit b923e77 1 hour ago
+History
+1 contributor
+28 lines (24 sloc) 979 Bytes
+{% assign curricula = "swc-gapminder|swc-inflammation"  | split: "|" %}
+{% unless curricula contains site.curriculum %}
+{% include warning-curriculum.html %}
+{% endunless %}
+
+{% include install_instructions/shell.html %}
+{% include install_instructions/git.html %}
+{% include install_instructions/editor.html %}
+
+{% if site.flavor == "r" %}
+{% include install_instructions/r.html %}
+{% elsif site.flavor == "python" %}
+{% include install_instructions/python.html %}
+{% elsif site.flavor == "FIXME" %}
+{% include install_instructions/r.html %}
+{% include install_instructions/python.html %}
+{% else %}
+{% include warning-flavor.html %}
+{% endif %}
+
+{% comment %}
+The following setup instructions are commented out because Carpentries workshops
+cover the these topics less frequently. Please uncomment the lines that
+correspond to the topics covered in your workshop.
+
+{% include install_instructions/sql.html %}
+{% include install_instructions/openrefine.html %}
+{% endcomment %}
+
+    © 2021 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+Loading complete

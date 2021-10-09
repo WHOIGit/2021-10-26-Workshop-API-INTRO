@@ -3,104 +3,32 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+venue: "Woods Hole Oceanographic Institution"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
+latitude: "41.524444134537084"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-70.67109463752749"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "October 26, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "8:30 - 12:30 EST"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+startdate: 2021-10-27      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2021-10-27        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Amber York"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Karen Soenen", "Stace Beaulieu", "Andrew Reed", "Emma Ozanich", "Ariel Vardi-Chouchana" ]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["ksoenen@whoi.edu","adyork@whoi.edu", "stace@whoi.edu", "areed@whoi.edu", "eozanich@whoi.edu", "arvardi@whoi.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite:   # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
+
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
-{% comment %}
-HEADER
-
-Edit the values in the block above to be appropriate for your workshop.
-If the value is not 'true', 'false', 'null', or a number, please use
-double quotation marks around the value, unless specified otherwise.
-And run 'make workshop-check' *before* committing to make sure that changes are good.
-{% endcomment %}
-
+<h2 id="lesson_intro">Learn about APIs to tap into data sources!</h2>
 
 {% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
+This is an INTRODUCTION to the LESSON and why the people should care about this workshop. Write a good pitch here.
 {% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
-
-
-{% comment %}
-Check DC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "dc" %}
-{% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-socsci" or site.curriculum == "dc-geospatial" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
+{% include data_reuse/intro_lesson.html %}
 
 
 <h2 id="general">General Information</h2>
@@ -117,6 +45,8 @@ the pitch.
 {% include dc/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
+{% elsif site.carpentry == "incubator" %}
+{% include data_reuse/intro_oiwg.html %}
 {% endif %}
 
 {% if site.pilot %}
@@ -135,6 +65,8 @@ workshop is only open to people from a particular institution.
 {% include dc/who.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
+{% elsif site.carpentry == "incubator" %}
+{% include data_reuse/who.html %}
 {% endif %}
 
 {% comment %}
@@ -195,16 +127,15 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong>
-  {% if online == "false" %}
-    Participants must bring a laptop with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% else %}
-    Participants must have access to a computer with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% endif %}
-  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <strong>Requirements:</strong> 
+  <ul>
+    <li>Participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.</li>
+    <li>A web browser (e.g. Chrome, Firefox).  Participants will be using the Developer Tools of their browser to look at API responsese. </li>
+	<li>[Optional] Your own python development environment. A working python notebook will be provided to participants to try out lessons and follow along, but you can use your own development environment if you wish.</li>
+    <li> Participants will need to join a Zoom video conference. Installing free zoom conference software is recommended.  You will not need a paid account. See <a href="https://support.zoom.us/hc/en-us/articles/201362193-Joining-a-Meeting">Joining a meeting from Zoom Help Center</a></li>
+   </ul>   
 </p>
+
 
 {% comment %}
 ACCESSIBILITY
@@ -271,23 +202,32 @@ Display the contact email address set in the configuration file.
 {% comment %}
 WHO CAN ATTEND?
 
-If you would like to specify who can attend the workshop,
-you can use the section below.
-
-Move the 'endcomment' tag above the beginning of the following
-<p> tag to make this section visible.
-
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
+I've adjusted the file here: "https://github.com/WHOIGit/2021-10-27-Workshop-DataReuse/blob/gh-pages/_includes/dc/who.html"
+to describe who can attend
 
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to ....
+    This workshop is targeted towards the technical WHOI staff in order to improve project efficiency and build technical skills. It will only be held for 20 people at a time through an online Zoom meeting. Registration is required. Please contact stace@whoi.edu for availability.
 </p>
-{% endcomment %}
+
+{% endcomment %}  
+
+
+
+
+{% comment %}
+REGISTRATION
+
+This is a WHOI specific section added to add the registration link. 
+The registration link has been set up in google drive by the workshop organisers rather than using the carpentries specific eventbrite registration.
+{% endcomment %}  
+
+<p id="registration">
+    <strong>How to register?:</strong>
+    Please register using the following <a href="https://docs.google.com/presentation/d/1GkIURS_6SPDhLuzYFa6awBUWlgOTjjT4ylvy-RVy6d0/edit#slide=id.p">link</a>. 
+</p>
+
+
 
 <hr/>
 
@@ -376,10 +316,15 @@ rows to the table if you wish to break down the schedule
 further. To use this custom schedule here, replace the block
 of code below the Schedule `<h2>` header below with
 `{% include custom-schedule.html %}`.
+
+Below you can find the workshop outline. Please go to the  [the lesson homepage]({{ site.incubator_lesson_site }})
+for an interactive page of the whole workshop.
+{{ site.incubator_lesson_site }}
 {% endcomment %}
 
 <h2 id="schedule">Schedule</h2>
-
+Below you can find the workshop outline. Please go to the <a href="{{ site.incubator_lesson_site }}">the lesson landing page</a>
+for an interactive page of the whole workshop. 
 {% if site.carpentry == "swc" %}
 {% include swc/schedule.html %}
 {% elsif site.carpentry == "dc" %}
@@ -387,8 +332,7 @@ of code below the Schedule `<h2>` header below with
 {% elsif site.carpentry == "lc" %}
 {% include lc/schedule.html %}
 {% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in [The Carpentries Incubator](https://carpentries-incubator.org/).
-Please check [the lesson homepage]({{ site.incubator_lesson_site }}) for a list of lesson sections and estimated timings.
+{% include data_reuse/schedule.html %}
 {% endif %}
 
 {% comment %}
@@ -467,3 +411,4 @@ Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+
