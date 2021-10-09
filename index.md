@@ -15,7 +15,7 @@ startdate: 2021-10-27      # machine-readable start date for the workshop in YYY
 enddate: 2021-10-27        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Amber York"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Karen Soenen", "Stace Beaulieu", "Andrew Reed", "Emma Ozanich", "Ariel Vardi-Chouchana" ]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["ksoenen@whoi.edu","adyork@whoi.edu", "stace@whoi.edu", "areed@whoi.edu", "eozanich@whoi.edu", "arvardi@whoi.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+email: ["adyork@whoi.edu", "stace@whoi.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:   # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -28,7 +28,7 @@ eventbrite:   # optional: alphanumeric key for Eventbrite registration, e.g., "1
 {% comment %}
 This is an INTRODUCTION to the LESSON and why the people should care about this workshop. Write a good pitch here.
 {% endcomment %}
-{% include data_reuse/intro_lesson.html %}
+{% include topic/intro_lesson.html %}
 
 
 <h2 id="general">General Information</h2>
@@ -46,7 +46,7 @@ the pitch.
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
 {% elsif site.carpentry == "incubator" %}
-{% include data_reuse/intro_oiwg.html %}
+{% include topic/intro.html %}
 {% endif %}
 
 {% if site.pilot %}
@@ -66,7 +66,7 @@ workshop is only open to people from a particular institution.
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
 {% elsif site.carpentry == "incubator" %}
-{% include data_reuse/who.html %}
+{% include topic/who.html %}
 {% endif %}
 
 {% comment %}
@@ -130,7 +130,7 @@ Modify the block below if there are any special requirements.
   <strong>Requirements:</strong> 
   <ul>
     <li>Participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.</li>
-    <li>A web browser (e.g. Chrome, Firefox).  Participants will be using the Developer Tools of their browser to look at API responsese. </li>
+    <li>A web browser (e.g. Chrome, Firefox).  Participants will be using the Developer Tools of their browser to look at API responses. </li>
 	<li>[Optional] Your own python development environment. A working python notebook will be provided to participants to try out lessons and follow along, but you can use your own development environment if you wish.</li>
     <li> Participants will need to join a Zoom video conference. Installing free zoom conference software is recommended.  You will not need a paid account. See <a href="https://support.zoom.us/hc/en-us/articles/201362193-Joining-a-Meeting">Joining a meeting from Zoom Help Center</a></li>
    </ul>   
@@ -332,7 +332,7 @@ for an interactive page of the whole workshop.
 {% elsif site.carpentry == "lc" %}
 {% include lc/schedule.html %}
 {% elsif site.carpentry == "incubator" %}
-{% include data_reuse/schedule.html %}
+{% include topic/schedule.html %}
 {% endif %}
 
 {% comment %}
